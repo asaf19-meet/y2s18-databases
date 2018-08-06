@@ -7,16 +7,18 @@ Base = declarative_base()
 
 class Knowledge(Base):
 	__tablename__='Knowledge'
+
 	id_number = Column(Integer, primary_key=True)
 	title = Column(String)
 	topic = Column(String)
 	rating = Column(Integer)
 	def __repr__(self):
-		return("article title: {}\n"
+		return(
+			"id number: {}\n"
+			"article title: {}\n"
 			"article topic: {}\n"
 			"article rating: {}").format(
-			self.title, self.topic, self.rating)
+			self.id_number, self.title, self.topic, self.rating)
 
-taekwondo = Knowledge(title = "Taekwondo", topic = "taekwondo", rating = "8")
-print(taekwondo)
-	
+
+
