@@ -15,10 +15,10 @@ class Knowledge(Base):
 	def __repr__(self):
 		return(
 			"id number: {}\n"
-			"article title: {}\n"
-			"article topic: {}\n"
-			"article rating: {}").format(
-			self.id_number, self.title, self.topic, self.rating)
+			"if you want to learn about {}\n"
+			"you should go to wikipedia and search for {}\n"
+			"the rating that we gave it is {} out of 10\n").format(
+			self.id_number, self.topic, self.title, self.rating)
 
 
 
